@@ -1,6 +1,6 @@
 {% set name = "xtensor-blas" %}
-{% set version = "0.3.1" %}
-{% set sha256 = "b7209bddafbc23d77aa80a0afe5667321db7b10a30adb9b91fd5e7dff5c8a113" %}
+{% set version = "0.4.0" %}
+{% set sha256 = "434c627367d8e392c681174552ecd1332c34d6124d1b7ab0fa9289c0dd7b1293" %}
 {% set variant = "openblas" %}
 
 package:
@@ -23,13 +23,13 @@ requirements:
   build:
     - toolchain
     - cmake
-    - xtensor >=0.10.2,<0.11.0
+    - xtensor >=0.11.0,<0.12.0
     - blas 1.1 {{ variant }}    # [not win]
-    - openblas 0.2.19|0.2.19.*  # [not win]
+    - openblas 0.2.20|0.2.20.*  # [not win]
   run:
-    - xtensor >=0.10.2,<0.11.0
+    - xtensor >=0.11.0,<0.12.0
     - blas 1.1 {{ variant }}    # [not win]
-    - openblas 0.2.19|0.2.19.*  # [not win]
+    - openblas 0.2.20|0.2.20.*  # [not win]
     
 test:
   commands:
