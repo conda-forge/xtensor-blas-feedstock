@@ -1,6 +1,6 @@
 {% set name = "xtensor-blas" %}
-{% set version = "0.10.0" %}
-{% set sha256 = "b7abc18f8e36b4c8bc9af7e1cc234a4aa4c3099195fb905ea5611c9f86806eca" %}
+{% set version = "0.10.1" %}
+{% set sha256 = "a0ba8875a946bf8d1de12cb739cf2c35636a468a9f91836fb776f2cfbb26dd1a" %}
 {% set variant = "openblas" %}
 
 package:
