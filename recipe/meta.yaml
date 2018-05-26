@@ -14,7 +14,8 @@ source:
 
 build:
   number: 0
-  # Skipping windows build since openblas is not available on windows
+  skip: True  # [win and vc<14]
+  # Skipping blas on windows since openblas is not available.
   # cf. https://github.com/conda-forge/openblas-feedstock/issues/2
   features:                     # [not win]
     - blas_{{ variant }}        # [not win]
