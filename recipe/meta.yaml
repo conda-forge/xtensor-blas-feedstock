@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 2
   skip: True  # [win and vc<14]
   # Skipping blas on windows since openblas is not available.
   # cf. https://github.com/conda-forge/openblas-feedstock/issues/2
@@ -37,9 +37,10 @@ test:
     - test -f ${PREFIX}/include/xtensor-blas/xblas.hpp  # [unix]
     - test -f ${PREFIX}/share/cmake/xtensor-blas/xtensor-blasConfig.cmake  # [unix]
     - test -f ${PREFIX}/share/cmake/xtensor-blas/xtensor-blasConfigVersion.cmake  # [unix]
-    - if exist %LIBRARY_PREFIX%\include\xtensor-blas\xblas.hpp (exit 0) else (exit 1)  # [win]
-    - if exist %PREFIX%\share\cmake\xtensor-blasConfig.cmake (exit 0) else (exit 1)  # [win]
-    - if exist %PREFIX%\share\cmake\xtensor-blasConfigVersion.cmake (exit 0) else (exit 1)  # [win]
+    # TODO: replace with %PREFIX%\Library with %LIBRARY_PREFIX%
+    - if exist %PREFIX%\Library\include\xtensor-blas\xblas.hpp (exit 0) else (exit 1)  # [win]
+    - if exist %PREFIX%\Library\share\cmake\xtensor-blasConfig.cmake (exit 0) else (exit 1)  # [win]
+    - if exist %PREFIX%\Library\share\cmake\xtensor-blasConfigVersion.cmake (exit 0) else (exit 1)  # [win]
 
 about:
   home: http://quantstack.net/xtensor
