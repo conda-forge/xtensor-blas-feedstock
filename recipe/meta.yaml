@@ -21,7 +21,7 @@ build:
 
 requirements:
   build:
-    - toolchain
+    - {{ compiler('cxx') }}
     - cmake
     - xtensor >=0.16.0,<0.17.0
     - blas 1.1 {{ variant }}    # [not win]
@@ -30,7 +30,7 @@ requirements:
     - xtensor >=0.16.0,<0.17.0
     - blas 1.1 {{ variant }}    # [not win]
     - openblas 0.2.20|0.2.20.*  # [not win]
-    
+
 test:
   commands:
     - test -f ${PREFIX}/include/xtensor-blas/xblas.hpp  # [unix]
