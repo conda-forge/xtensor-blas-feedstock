@@ -1,6 +1,6 @@
 {% set name = "xtensor-blas" %}
-{% set version = "0.11.0" %}
-{% set sha256 = "4a8186977d8f7b58a86347954048d3ea64d8b7b527ff049ebcb3b7c87f584263" %}
+{% set version = "0.11.1" %}
+{% set sha256 = "297be8d6cc691e7aebf653a86bc422d20d9f54e2dc3251862c9b64c09e7c6571" %}
 {% set variant = "openblas" %}
 
 package:
@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   skip: True  # [win and vc<14]
   # Skipping blas on windows since openblas is not available.
   # cf. https://github.com/conda-forge/openblas-feedstock/issues/2
@@ -35,12 +35,12 @@ requirements:
 test:
   commands:
     - test -f ${PREFIX}/include/xtensor-blas/xblas.hpp  # [unix]
-    - test -f ${PREFIX}/share/cmake/xtensor-blas/xtensor-blasConfig.cmake  # [unix]
-    - test -f ${PREFIX}/share/cmake/xtensor-blas/xtensor-blasConfigVersion.cmake  # [unix]
+    - test -f ${PREFIX}/lib/cmake/xtensor-blas/xtensor-blasConfig.cmake  # [unix]
+    - test -f ${PREFIX}/lib/cmake/xtensor-blas/xtensor-blasConfigVersion.cmake  # [unix]
     # TODO: replace with %PREFIX%\Library with %LIBRARY_PREFIX%
     - if exist %PREFIX%\Library\include\xtensor-blas\xblas.hpp (exit 0) else (exit 1)  # [win]
-    - if exist %PREFIX%\Library\share\cmake\xtensor-blasConfig.cmake (exit 0) else (exit 1)  # [win]
-    - if exist %PREFIX%\Library\share\cmake\xtensor-blasConfigVersion.cmake (exit 0) else (exit 1)  # [win]
+    - if exist %PREFIX%\Library\lib\cmake\xtensor-blasConfig.cmake (exit 0) else (exit 1)  # [win]
+    - if exist %PREFIX%\Library\lib\cmake\xtensor-blasConfigVersion.cmake (exit 0) else (exit 1)  # [win]
 
 about:
   home: http://quantstack.net/xtensor
