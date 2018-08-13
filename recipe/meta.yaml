@@ -1,6 +1,6 @@
 {% set name = "xtensor-blas" %}
-{% set version = "0.12.0" %}
-{% set sha256 = "fa57fd2160c6d8ac0c97d31e7329a51ba93ced9206ee62f7b3c4064fcc3156d8" %}
+{% set version = "0.13.0" %}
+{% set sha256 = "cc43351528ff8d98acb53bcb52666510babbe3d1452f71ac440aa8aa90d75faf" %}
 {% set variant = "openblas" %}
 
 package:
@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: True  # [win and vc<14]
   # Skipping blas on windows since openblas is not available.
   # cf. https://github.com/conda-forge/openblas-feedstock/issues/2
