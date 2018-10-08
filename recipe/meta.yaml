@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1000
   skip: True  # [win and vc<14]
   # Skipping blas on windows since openblas is not available.
   # cf. https://github.com/conda-forge/openblas-feedstock/issues/2
