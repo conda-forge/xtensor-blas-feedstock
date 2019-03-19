@@ -1,7 +1,6 @@
 {% set name = "xtensor-blas" %}
 {% set version = "0.15.1" %}
 {% set sha256 = "221fbb0d4106d6bfbca55aba19b58efc4b2177b6c7c2404290bc1b3d33337127" %}
-{% set variant = "openblas" %}
 
 package:
   name: {{ name|lower }}
@@ -13,25 +12,22 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win and vc<14]
   # TODO: remove the feature when conda-forge drops it globally.
   # Feature takes more priority than version.
   features:                     # [not win]
-    - blas_{{ variant }}        # [not win]
 
 requirements:
   build:
     - cmake
     - {{ compiler('cxx') }}
   host:
+    - libblas
+    - libcblas
     - xtensor >=0.19.0,<0.20.0
-    - blas 1.1 {{ variant }}    # [not win]
-    - openblas                  # [not win]
   run:
     - xtensor >=0.19.0,<0.20.0
-    - blas 1.1 {{ variant }}    # [not win]
-    - openblas                  # [not win]
 
 test:
   commands:
