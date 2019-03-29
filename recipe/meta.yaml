@@ -1,6 +1,6 @@
 {% set name = "xtensor-blas" %}
-{% set version = "0.15.2" %}
-{% set sha256 = "0885bf3babb50f48964d868a9cc1fb4742d50ecb36444b5865b605a189a5e062" %}
+{% set version = "0.16.0" %}
+{% set sha256 = "cc112e1234f7c80ecfbb9a555df069a3a8b97098688dd7be7abb0d91991acf79" %}
 
 package:
   name: {{ name|lower }}
@@ -23,9 +23,9 @@ requirements:
     - libblas
     - libcblas
     - liblapack
-    - xtensor >=0.19.0,<0.20.0
+    - xtensor >=0.20.0,<0.21.0
   run:
-    - xtensor >=0.19.0,<0.20.0
+    - {{ pin_compatible('xtensor', max_pin='x.x') }}
 
 test:
   commands:
