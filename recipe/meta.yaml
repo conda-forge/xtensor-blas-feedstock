@@ -1,6 +1,6 @@
 {% set name = "xtensor-blas" %}
-{% set version = "0.17.1" %}
-{% set sha256 = "87a66984321d9ed245cfc9aff91e409492069c704675f995efb5e7f6fde24d06" %}
+{% set version = "0.17.2" %}
+{% set sha256 = "2798c7e230d0c4b2d357bba20a0ef23a2b774d892be31ebbf702cb9935ea9f64" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  skip: True  # [win and vc<14]
+  skip: true  # [win and vc<14]
 
 requirements:
   build:
@@ -41,8 +41,8 @@ about:
   license: BSD 3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'BLAS extension to xtensor'
-  description: 'xtensor-blas is an extension to the xtensor library, offering bindings to BLAS and LAPACK libraries through cxxblas and cxxlapack from the FLENS project.'
+  summary: BLAS extension to xtensor
+  description: xtensor-blas is an extension to the xtensor library, offering bindings to BLAS and LAPACK libraries through cxxblas and cxxlapack from the FLENS project.
   doc_url: http://xtensor-blas.readthedocs.io
   dev_url: https://github.com/xtensor-stack/xtensor-blas
 
