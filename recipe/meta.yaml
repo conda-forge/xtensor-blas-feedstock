@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
 
 requirements:
@@ -32,9 +32,9 @@ test:
     - test -f ${PREFIX}/include/xtensor-blas/xblas.hpp  # [unix]
     - test -f ${PREFIX}/lib/cmake/xtensor-blas/xtensor-blasConfig.cmake  # [unix]
     - test -f ${PREFIX}/lib/cmake/xtensor-blas/xtensor-blasConfigVersion.cmake  # [unix]
-    - if exist %LIBRARY_PREFIX%\include\xtensor-blas\xblas.hpp (exit 0) else (exit 1)  # [win]
-    - if exist %LIBRARY_PREFIX%\lib\cmake\xtensor-blasConfig.cmake (exit 0) else (exit 1)  # [win]
-    - if exist %LIBRARY_PREFIX%\lib\cmake\xtensor-blasConfigVersion.cmake (exit 0) else (exit 1)  # [win]
+    - if not exist %LIBRARY_PREFIX%\include\xtensor-blas\xblas.hpp (exit 1)  # [win]
+    - if not exist %LIBRARY_PREFIX%\lib\cmake\xtensor-blas\xtensor-blasConfig.cmake (exit 1)  # [win]
+    - if not exist %LIBRARY_PREFIX%\lib\cmake\xtensor-blas\xtensor-blasConfigVersion.cmake (exit 1)  # [win]
 
 about:
   home: http://quantstack.net/xtensor
@@ -51,3 +51,4 @@ extra:
     - wolfv
     - SylvainCorlay
     - JohanMabille
+    - davidbrochart
