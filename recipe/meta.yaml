@@ -52,3 +52,4 @@ extra:
     - SylvainCorlay
     - JohanMabille
     - davidbrochart
+    - conda-forge/xtensor
