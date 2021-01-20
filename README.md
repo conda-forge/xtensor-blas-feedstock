@@ -3,7 +3,7 @@ About xtensor-blas
 
 Home: http://quantstack.net/xtensor
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xtensor-blas-feedstock/blob/master/LICENSE.txt)
 
