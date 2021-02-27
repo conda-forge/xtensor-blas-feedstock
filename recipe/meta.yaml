@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
 
 requirements:
@@ -38,13 +38,13 @@ test:
     - if not exist %LIBRARY_PREFIX%\lib\cmake\xtensor-blas\xtensor-blasConfigVersion.cmake (exit 1)  # [win]
 
 about:
-  home: http://quantstack.net/xtensor
+  home: https://github.com/xtensor-stack/xtensor-blas
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: BLAS extension to xtensor
   description: xtensor-blas is an extension to the xtensor library, offering bindings to BLAS and LAPACK libraries through cxxblas and cxxlapack from the FLENS project.
-  doc_url: http://xtensor-blas.readthedocs.io
+  doc_url: https://xtensor-blas.readthedocs.io
   dev_url: https://github.com/xtensor-stack/xtensor-blas
 
 extra:
