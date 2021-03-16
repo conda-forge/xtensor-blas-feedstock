@@ -1,6 +1,6 @@
 {% set name = "xtensor-blas" %}
-{% set version = "0.19.0" %}
-{% set sha256 = "0fa8001afa2d9f7fb1d3c101ae04565f39ef2880a84acec216e699ed14950cb4" %}
+{% set version = "0.19.1" %}
+{% set sha256 = "c12200b74a8d25c9c278a696d3293a3c81a670e67a1bf14e64185b137ea8ac7e" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
@@ -27,6 +27,7 @@ requirements:
     - xtensor >=0.23.0,<0.24.0
   run:
     - {{ pin_compatible('xtensor', max_pin='x.x') }}
+    - blas-devel
 
 test:
   commands:
