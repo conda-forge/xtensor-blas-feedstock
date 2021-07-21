@@ -1,7 +1,7 @@
 About xtensor-blas
 ==================
 
-Home: http://quantstack.net/xtensor
+Home: https://github.com/xtensor-stack/xtensor-blas
 
 Package license: BSD-3-Clause
 
@@ -11,7 +11,7 @@ Summary: BLAS extension to xtensor
 
 Development: https://github.com/xtensor-stack/xtensor-blas
 
-Documentation: http://xtensor-blas.readthedocs.io
+Documentation: https://xtensor-blas.readthedocs.io
 
 xtensor-blas is an extension to the xtensor library, offering bindings to BLAS and LAPACK libraries through cxxblas and cxxlapack from the FLENS project.
 
@@ -75,6 +75,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>osx_arm64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2227&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/xtensor-blas-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>win_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2227&branchName=master">
@@ -103,6 +110,7 @@ Installing `xtensor-blas` from the `conda-forge` channel can be achieved by addi
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `xtensor-blas` can be installed with:
@@ -173,9 +181,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
