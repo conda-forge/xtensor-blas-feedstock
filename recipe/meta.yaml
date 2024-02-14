@@ -1,6 +1,5 @@
 {% set name = "xtensor-blas" %}
-{% set version = "0.20.0" %}
-{% set sha256 = "272f5d99bb7511a616bfe41b13a000e63de46420f0b32a25fa4fb935b462c7ff" %}
+{% set version = "0.21.0" %}
 
 package:
   name: {{ name|lower }}
@@ -9,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/xtensor-stack/xtensor-blas/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 89ce6eceb47018f3b557945468502593e0bf0e5a816548aad8ac22247c8198b1
 
 build:
   number: 0
@@ -21,7 +20,7 @@ requirements:
     - {{ compiler('cxx') }}
     - make  # [unix]
   host:
-    - xtensor >=0.24.0,<0.25.0
+    - xtensor >=0.25.0,<0.26.0
   run:
     - {{ pin_compatible('xtensor', max_pin='x.x') }}
     - blas-devel
