@@ -19,14 +19,7 @@ Current build status
 ====================
 
 
-<table><tr>
-    <td>Travis</td>
-    <td>
-      <a href="https://app.travis-ci.com/conda-forge/xtensor-blas-feedstock">
-        <img alt="linux" src="https://img.shields.io/travis/com/conda-forge/xtensor-blas-feedstock/main.svg?label=Linux">
-      </a>
-    </td>
-  </tr>
+<table>
     
   <tr>
     <td>Azure</td>
@@ -212,7 +205,7 @@ Feedstock Maintainers
 
 * [@JohanMabille](https://github.com/JohanMabille/)
 * [@SylvainCorlay](https://github.com/SylvainCorlay/)
-* [@conda-forge/xtensor](https://github.com/conda-forge/xtensor/)
+* [@conda-forge/xtensor](https://github.com/orgs/conda-forge/teams/xtensor/)
 * [@davidbrochart](https://github.com/davidbrochart/)
 * [@wolfv](https://github.com/wolfv/)
 
